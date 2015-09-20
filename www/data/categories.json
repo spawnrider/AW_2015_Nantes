@@ -1,0 +1,26 @@
+[
+ {
+    "id": "p2_100729",
+    "name": "Culture",
+    "color": "#ffd300",
+    "icon": "http://www.loire-atlantique.fr/upload/docs/image/png/2014-07/culture.png"
+  },
+  {
+    "id": "p2_100730",
+    "name": "Sport",
+    "color": "#e2208c",
+    "icon": "http://www.loire-atlantique.fr/upload/docs/image/png/2014-07/sport.png"
+  },
+  {
+    "id": "p2_100731",
+    "name": "Vide-greniers, brocantes",
+    "color": "#44bedf",
+    "icon": "http://www.loire-atlantique.fr/upload/docs/image/png/2014-07/brocante.png"
+  },
+  {
+    "id": "p2_100732",
+    "name": "Balades, randos",
+    "color": "#adc800",
+    "icon": "http://www.loire-atlantique.fr/upload/docs/image/png/2014-07/rando.png"
+  }
+]
