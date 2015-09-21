@@ -1,0 +1,21 @@
+[
+  {"id":1, "town":"Munich", "coord": {"lat": 48.1351253, "lng": 11.5819806}, "country":"Germany", "date":"2015-09-28", "flag": "http://flags.fmcdn.net/data/flags/small/de.png"},
+  {"id":2, "town":"Hambourg", "coord": {"lat": 53.5510846, "lng": 9.9936818}, "country":"Germany", "date":"2015-09-28", "flag": "http://flags.fmcdn.net/data/flags/small/de.png"},
+  {"id":3, "town":"New York", "coord" : {"lat": 40.7127837, "lng": -74.0059413}, "country":"USA", "date":"2015-09-28", "flag":"http://flags.fmcdn.net/data/flags/small/us.png"},
+  {"id":4, "town":"Utrecht", "coord": {"lat": 52.09073739999999, "lng": 5.1214201}, "country":"Nederland", "date":"2015-09-29", "flag":"http://flags.fmcdn.net/data/flags/small/nl.png"},
+  {"id":5, "town":"Diegem", "coord": {"lat": 50.8940397, "lng": 4.4362628}, "country":"Belgium", "date":"2015-09-29", "flag":"http://flags.fmcdn.net/data/flags/small/be.png"},
+  {"id":6, "town":"Melbourne", "coord": {"lat": -37.814107, "lng": 144.96328}, "country":"Australia", "date":"2015-09-29","flag":"http://flags.fmcdn.net/data/flags/small/au.png"},
+  {"id":7, "town":"Nantes", "coord": {"lat": 47.218371, "lng": -1.553621}, "country":"France", "date":"2015-09-29", "flag":"http://flags.fmcdn.net/data/flags/small/fr.png"},
+  {"id":8, "town":"Chicago", "coord":  {"lat": 41.8781136, "lng": -87.6297982}, "country":"USA", "date":"2015-09-29", "flag":"http://flags.fmcdn.net/data/flags/small/us.png"},
+  {"id":9, "town":"Madrid", "coord": {"lat": 40.4167754, "lng": -3.7037902}, "country":"Spain", "date":"2015-09-30", "flag":"http://flags.fmcdn.net/data/flags/small/es.png"},
+  {"id":10, "town":"Atlanta","coord" : {"lat": 33.7489954, "lng": -84.3879824}, "country":"USA", "date":"2015-09-30", "flag":"http://flags.fmcdn.net/data/flags/small/us.png"},
+  {"id":11, "town":"Mumbai", "coord": {"lat": 19.0759837, "lng": 72.8776559}, "country":"India", "date":"2015-09-30","flag":"http://flags.fmcdn.net/data/flags/small/in.png"},
+  {"id":12, "town":"Telford","coord" : {"lat": 52.678419, "lng": -2.445258}, "country":"United Kingdom", "date":"2015-09-30", "flag":"http://flags.fmcdn.net/data/flags/small/gb.png"},
+  {"id":13, "town":"Toulouse","coord" : {"lat": 43.604652, "lng": 1.444209}, "country":"France", "date":"2015-09-30", "flag":"http://flags.fmcdn.net/data/flags/small/fr.png"},
+  {"id":14, "town":"Casablanca", "coord":  {"lat": 33.5731104, "lng": -7.589843399999999}, "country":"Morocco", "date":"2015-09-30", "flag":"http://flags.fmcdn.net/data/flags/small/ma.png"},
+  {"id":15, "town":"Munich","coord" : {"lat": 48.1351253, "lng": 11.5819806}, "country":"Germany", "date":"2015-09-30", "flag": "http://flags.fmcdn.net/data/flags/small/de.png"},
+  {"id":16, "town":"Lyon", "coord" : {"lat": 45.764043, "lng": 4.835659}, "country":"France", "date":"2015-09-30", "flag":"http://flags.fmcdn.net/data/flags/small/fr.png"},
+  {"id":17, "town":"London","coord" : {"lat": 51.5073509, "lng": -0.1277583}, "country":"United Kingdom", "date":"2015-09-30", "flag":"http://flags.fmcdn.net/data/flags/small/gb.png"},
+  {"id":18, "town":"Sao Paulo", "coord" : {"lat": -23.5505199, "lng": -46.63330939999999}, "country":"Brazil", "date":"2015-09-30", "flag":"http://flags.fmcdn.net/data/flags/small/br.png"},
+  {"id":19, "town":"Rio de Janeiro","coord" : {"lat": -22.9068467, "lng": -43.1728965}, "country":"Brazil", "date":"2015-09-30", "flag":"http://flags.fmcdn.net/data/flags/small/br.png"}
+]

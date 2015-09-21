@@ -1,25 +1,25 @@
 angular.module('aw_nantes.filters', [])
-    .filter('groupByRegion', function($parse) {
+    .filter('groupByDate', function($parse) {
         var dividers = {};
 
         return function(input) {
             if (!input || !input.length) return;
 
             var output = [],
-                previousRegion,
-                currentRegion;
+                previousDate,
+                currentDate;
 
             for (var i = 0, ii = input.length; i < ii && (item = input[i]); i++) {
-                currentRegion = item.region;
-                if (!previousRegion || currentRegion != previousRegion) {
+                currentDate = item.date;
+                if (!previousDate || currentDate != previousDate) {
 
-                    var dividerId = currentRegion.replace(new RegExp(' ', 'g'), '');
+                    var dividerId = currentDate;
 
                     if (!dividers[dividerId]) {
-
+                        console.log("Divider Id "+dividerId);
                         dividers[dividerId] = {
                             isDivider: true,
-                            divider: currentRegion
+                            divider: currentDate
                         };
                     }
 
@@ -28,7 +28,7 @@ angular.module('aw_nantes.filters', [])
                 }
 
                 output.push(item);
-                previousRegion = currentRegion;
+                previousDate = currentDate;
             }
 
             return output;

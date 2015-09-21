@@ -6,11 +6,11 @@ angular.module('aw_nantes.directives', [])
     };
 
     function compile (element, attr) {
-        var height = attr.itemHeight || '73';
-        attr.$set('itemHeight', 'gare.isDivider ? 37 : ' + height);
-        element.children().attr('ng-hide', 'gare.isDivider');
+        var height = attr.itemHeight || '100';
+        attr.$set('itemHeight', 'categorie.isDivider ? 37 : ' + height);
+        element.children().attr('ng-hide', 'categorie.isDivider');
         element.prepend(
-            '<div class="item item-divider ng-hide" ng-show="gare.isDivider" ng-bind="gare.divider"></div>'
+            '<div class="item item-divider ng-hide" ng-show="categorie.isDivider" ng-bind="categorie.divider"></div>'
         );
     }
 })

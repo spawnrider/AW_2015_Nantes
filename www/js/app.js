@@ -1,5 +1,5 @@
 // Ionic Starter App
-angular.module('starter', ['ionic', 'aw_nantes.controllers', 'aw_nantes.services', 'aw_nantes.filters', 'aw_nantes.directives'])
+angular.module('starter', ['ionic', 'ionic-material', 'uiGmapgoogle-maps','aw_nantes.controllers', 'aw_nantes.services', 'aw_nantes.filters', 'aw_nantes.directives'])
 
 .run(function($ionicPlatform) {
     $ionicPlatform.ready(function() {
@@ -8,7 +8,6 @@ angular.module('starter', ['ionic', 'aw_nantes.controllers', 'aw_nantes.services
         if (window.cordova && window.cordova.plugins.Keyboard) {
             cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
             cordova.plugins.Keyboard.disableScroll(true);
-
         }
         if (window.StatusBar) {
             // org.apache.cordova.statusbar required
@@ -17,6 +16,9 @@ angular.module('starter', ['ionic', 'aw_nantes.controllers', 'aw_nantes.services
     });
 })
 
+.config(function($ionicConfigProvider) {
+    $ionicConfigProvider.navBar.alignTitle("center");
+})
 .config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
         .state('app', {
