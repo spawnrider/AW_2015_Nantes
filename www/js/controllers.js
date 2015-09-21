@@ -1,6 +1,6 @@
 angular.module('aw_nantes.controllers', ['aw_nantes.services'])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout, NantesService) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout, AgendaService) {
     console.log("Controller AppCtrl");
     // With the new view caching in Ionic, Controllers are only called
     // when they are recreated or on app start, instead of every page change.
@@ -10,15 +10,15 @@ angular.module('aw_nantes.controllers', ['aw_nantes.services'])
     //});
 })
 
-.controller('CategoriesCtrl', function($scope, NantesService) {
-    console.log("Controller CategoriesCtrl");
-    $scope.categories = NantesService.getList();
+.controller('AgendaCtrl', function($scope, AgendaService) {
+    console.log("Controller AgendaCtrl");
+    $scope.categories = AgendaService.getList();
 })
 
-.controller('CategorieCtrl', function($scope, $stateParams, NantesService) {
-    categorieCode = $stateParams.categorieCode;
-    console.log("Controller CategorieCtrl : "+categorieCode);
+.controller('EventCtrl', function($scope, $stateParams, AgendaService) {
+    eventId = $stateParams.eventId;
+    console.log("Controller EventCtrl : "+eventId);
 
-    $scope.content = NantesService.getByProperty('categorieCode', categorieCode);
-    console.log('Current categorie : ' + JSON.stringify($scope.content));
+    $scope.event = AgendaService.getByProperty('id', eventId);
+    console.log('Current event : ' + JSON.stringify($scope.event));
 })

@@ -25,31 +25,31 @@ angular.module('starter', ['ionic', 'aw_nantes.controllers', 'aw_nantes.services
         templateUrl: 'templates/menu.html',
         controller: 'AppCtrl',
         resolve: {
-            init: function(NantesService) {
-                return NantesService.init(); // init the SNCF gare list
+            init: function(AgendaService) {
+                return AgendaService.init();
             }
         }
     })
 
-    .state('app.categories', {
-        url: '/categories',
+    .state('app.agenda', {
+        url: '/agenda',
         views: {
             'menuContent': {
-                templateUrl: 'templates/categories.html',
-                controller: 'CategoriesCtrl'
+                templateUrl: 'templates/agenda.html',
+                controller: 'AgendaCtrl'
             }
         }
     })
 
     .state('app.single', {
-        url: '/categories/:categorieCode',
+        url: '/agenda/:eventId',
         views: {
             'menuContent': {
-                templateUrl: 'templates/categorie.html',
-                controller: 'CategorieCtrl'
+                templateUrl: 'templates/event.html',
+                controller: 'EventCtrl'
             }
         }
     });
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/app/categories');
+    $urlRouterProvider.otherwise('/app/agenda');
 });

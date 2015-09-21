@@ -1,0 +1,12 @@
+<ion-view view-title="Agenda">
+    <ion-content>
+        <ion-list>
+            <a ng-repeat="categorie in categories" class="item item-thumbnail-left" href="#/app/agenda/{{categorie.id}}">
+                <img src="{{categorie.flag}}">
+                <h2>{{categorie.town}}</h2>
+                <p>{{categorie.date}}</p>
+                <p>{{categorie.country}}</p>
+            </a>
+        </ion-list>
+    </ion-content>
+</ion-view>
