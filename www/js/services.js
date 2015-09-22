@@ -29,19 +29,7 @@ angular.module('aw_nantes.services', ['ngResource'])
 
             return serv;
         };
-
-        var getItemsCount = function(catId) {
-            // http://api.loire-atlantique.fr:80/opendata/1.0/event/count?catIds=p2_100735
-            console.log('AgendaService->getItemsCount called for ' + catId);
-
-            var serv = $http.get("http://api.loire-atlantique.fr:80/opendata/1.0/event/count?catIds=" + catId).
-            success(function(data, status) {
-                return data;
-            });
-
-            return serv;
-        }
-
+        
         var init = function() {
             console.log('AgendaService->init called');
             allGare = [];

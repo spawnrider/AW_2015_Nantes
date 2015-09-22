@@ -10,7 +10,7 @@ angular.module('aw_nantes.controllers', ['aw_nantes.services'])
     //});
 })
 
-.controller('AgendaCtrl', function($scope, $compile, AgendaService, OSMService, ionicMaterialInk, ionicMaterialMotion) {
+.controller('AgendaCtrl', function($scope, $compile, AgendaService, OSMService) {
     console.log("Controller AgendaCtrl");
     $scope.categories = AgendaService.getList();
 
@@ -54,12 +54,6 @@ angular.module('aw_nantes.controllers', ['aw_nantes.services'])
 
         return marker;
     };
-
-    // Set Motion
-    ionicMaterialMotion.fadeSlideInRight();
-
-    // Set Ink
-    ionicMaterialInk.displayEffect();
 
     $scope.clickTest = function() {
         alert('Example of infowindow with ng-click')

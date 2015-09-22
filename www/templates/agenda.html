@@ -2,16 +2,12 @@
     <ion-tabs class="tabs-positive tabs-icon-only has-header">
         <ion-tab title="Liste" icon-on="ion-ios-list" icon-off="ion-ios-list-outline">
             <div class="padding">
-                <ion-content>
+                <ion-content class="has-header">
                     <ion-list>
-                        <div collection-repeat="categorie in categories | groupByDate" divider-collection-repeat>
-                            <a class="item item-thumbnail-left" href="#/app/agenda/{{categorie.id}}">
-                                <img src="{{categorie.flag}}">
-                                <h2>{{categorie.town}}</h2>
-                                <p>{{categorie.date}}</p>
-                                <p>{{categorie.country}}</p>
-                            </a>
-                        </div>
+                        <ion-item ng-style="{'line-height': '100px'}" back-img="/img/bg/{{categorie.country.replace(' ','')}}.jpg" item="categorie" ng-repeat="categorie in categories" href="#/app/agenda/{{categorie.id}}">
+                        	<h2>{{categorie.town}} - {{categorie.country}}</h2>
+                        	<span>{{categorie.date}}</span>
+                        </ion-item>
                     </ion-list>
                 </ion-content>
             </div>
