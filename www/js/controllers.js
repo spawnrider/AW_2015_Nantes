@@ -34,6 +34,8 @@ angular.module('aw_nantes.controllers', ['aw_nantes.services'])
                 $scope.markers.push(createMarker(cat, data.lat, data.lng));
             });
         }
+
+        cat.background = cat.town.replace(new RegExp(' ', 'g'),'').toLowerCase()+"-"+cat.country.replace(' ','').toLowerCase()+".jpg";
     });
 
     function createMarker(cat, lat, lng) {
