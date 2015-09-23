@@ -1,5 +1,22 @@
-<ion-view view-title="Evenement de {{event.town}} - {{event.country}}">
-  <ion-content>
-    <h1>Event</h1>
-  </ion-content>
+<ion-view view-title="{{event.town}} - {{event.country}}">
+    <ion-content>
+        <h1>Agenda de la journée</h1>
+        <div ng-repeat="eventDetail in eventDetails">
+            <div class="list card" ng-repeat="stream in eventDetail.streams">
+                <div class="item item-divider">
+                    <h2 ng-if="eventDetail.streams.length != 1">Slot#{{stream.id}} - {{stream.title}}</h2>
+                    <h2 ng-if="eventDetail.streams.length == 1">{{stream.title}}</h2>
+                    <p>{{eventDetail.slot}}</p>
+                </div>
+                <div ng-if="stream.description" class="item item-text-wrap">
+                    <p>{{stream.description}}</p>
+                </div>
+                <a ng-if="stream.speakers" class="item item-divider assertive">
+                    {{stream.speakers}}
+                </a>
+            </div>
+        </div>
+
+        <div ng-if="!eventDetails">L'agenda n'est pas disponible</div>
+    </ion-content>
 </ion-view>

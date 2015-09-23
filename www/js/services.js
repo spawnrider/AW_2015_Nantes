@@ -2,6 +2,7 @@ angular.module('aw_nantes.services', ['ngResource'])
 
 .factory('AgendaService', function($http, $rootScope, $filter) {
         var categorieURL = "https://gist.githubusercontent.com/spawnrider/a61877d43331bb51b6a8/raw";
+        var agendaNantes = categorieURL +"/746a54d71dec617a2057f5377d23ebec4a006a70/cap_aws2015_nantes_calendar.json";
         var allCategories;
 
         var setList = function(newObj) {
@@ -29,7 +30,18 @@ angular.module('aw_nantes.services', ['ngResource'])
 
             return serv;
         };
-        
+
+        var getNantesAgenda = function() {
+            console.log('AgendaService->getNantesAgenda called');
+
+            var serv = $http.get(agendaNantes).
+            success(function(data, status) {
+                return data;
+            });
+
+            return serv;
+        };
+
         var init = function() {
             console.log('AgendaService->init called');
             allGare = [];
@@ -43,7 +55,8 @@ angular.module('aw_nantes.services', ['ngResource'])
         return {
             getList: getList,
             init: init,
-            getByProperty: getByProperty
+            getByProperty: getByProperty,
+            getNantesAgenda: getNantesAgenda
         };
     })
     .factory('OSMService', function($http, $rootScope, $filter) {

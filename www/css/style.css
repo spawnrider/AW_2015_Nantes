@@ -28,3 +28,22 @@
     text-shadow: 0 0 4px rgba(0, 0, 0, 0.95);
     line-height: 17px;
     vertical-align: top;
+}
+
+.presentation {
+    padding: 10px;
+}
+
+.my-menu {
+  background-color: #3f4041;
+}
+
+.my-menu .list {
+  background-color: transparent;
+}
+
+.my-menu .item, .my-menu .item-content, .my-menu .item-complex{
+  background-color: transparent;
+  color: #FFFFFF;
+  border-color: #333333;
+}

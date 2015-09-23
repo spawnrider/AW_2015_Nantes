@@ -1,5 +1,5 @@
 // Ionic Starter App
-angular.module('starter', ['ionic', 'uiGmapgoogle-maps','aw_nantes.controllers', 'aw_nantes.services', 'aw_nantes.filters', 'aw_nantes.directives'])
+angular.module('starter', ['ionic', 'uiGmapgoogle-maps', 'aw_nantes.controllers', 'aw_nantes.services', 'aw_nantes.filters', 'aw_nantes.directives'])
 
 .run(function($ionicPlatform) {
     $ionicPlatform.ready(function() {
@@ -9,7 +9,7 @@ angular.module('starter', ['ionic', 'uiGmapgoogle-maps','aw_nantes.controllers',
             cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
             cordova.plugins.Keyboard.disableScroll(true);
         }
-    
+
         if (window.StatusBar) {
             // org.apache.cordova.statusbar required
             StatusBar.styleDefault();
@@ -20,19 +20,20 @@ angular.module('starter', ['ionic', 'uiGmapgoogle-maps','aw_nantes.controllers',
 .config(function($ionicConfigProvider) {
     $ionicConfigProvider.navBar.alignTitle("center");
 })
+
 .config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
         .state('app', {
-        url: '/app',
-        abstract: true,
-        templateUrl: 'templates/menu.html',
-        controller: 'AppCtrl',
-        resolve: {
-            init: function(AgendaService) {
-                return AgendaService.init();
+            url: '/app',
+            abstract: true,
+            templateUrl: 'templates/menu.html',
+            controller: 'AppCtrl',
+            resolve: {
+                init: function(AgendaService) {
+                    return AgendaService.init();
+                }
             }
-        }
-    })
+        })
 
     .state('app.agenda', {
         url: '/agenda',
@@ -44,12 +45,33 @@ angular.module('starter', ['ionic', 'uiGmapgoogle-maps','aw_nantes.controllers',
         }
     })
 
-    .state('app.single', {
+    .state('app.event', {
         url: '/agenda/:eventId',
         views: {
             'menuContent': {
                 templateUrl: 'templates/event.html',
                 controller: 'EventCtrl'
+            }
+        }
+    })
+
+    .state('app.carte', {
+        url: '/carte',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/carte.html',
+                controller: 'CarteCtrl'
+            }
+        }
+    })
+
+
+    .state('app.infos', {
+        url: '/infos',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/infos.html',
+                controller: 'InfosCtrl'
             }
         }
     });

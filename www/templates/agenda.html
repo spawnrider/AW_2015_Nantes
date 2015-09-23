@@ -1,27 +1,10 @@
 <ion-view view-title="Agenda">
-    <ion-tabs class="tabs-positive tabs-icon-only has-header">
-        <ion-tab title="Liste" icon-on="ion-ios-list" icon-off="ion-ios-list-outline">
-            <div class="padding">
-                <ion-content class="has-header">
-                    <ion-list>
-                        <ion-item ng-style="{'line-height': '100px'}" back-img="img/bg/{{categorie.background}}" item="categorie" ng-repeat="categorie in categories" href="#/app/agenda/{{categorie.id}}">
-                        	<h2>{{categorie.town}} - {{categorie.country}}</h2>
-                        	<span>{{categorie.date}}</span>
-                        </ion-item>
-                    </ion-list>
-                </ion-content>
-            </div>
-        </ion-tab>
-        <ion-tab title="Carte" icon-on="ion-ios-world" icon-off="ion-ios-world-outline">
-            <ion-content class="map-container">
-                <ui-gmap-google-map center='map.center' zoom='map.zoom'>
-                    <ui-gmap-markers models="markers" coords="'self'" click="'onClick'">
-                        <ui-gmap-windows show="show">
-                            <div ng-non-bindable>{{title}}</div>
-                        </ui-gmap-windows>
-                    </ui-gmap-markers>
-                </ui-gmap-google-map>
-            </ion-content>
-        </ion-tab>
-    </ion-tabs>
+    <ion-content class="has-header">
+        <ion-list>
+            <ion-item ng-style="{'line-height': '100px'}" back-img="img/bg/{{categorie.background}}" item="categorie" ng-repeat="categorie in categories" href="#/app/agenda/{{categorie.id}}">
+                <h2>{{categorie.town}} - {{categorie.country}}</h2>
+                <span>{{categorie.date}}</span>
+            </ion-item>
+        </ion-list>
+    </ion-content>
 </ion-view>
