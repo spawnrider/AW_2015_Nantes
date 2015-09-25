@@ -60,11 +60,6 @@ angular.module('aw_nantes.controllers', ['aw_nantes.services'])
 
         marker['id'] = cat.id;
 
-        marker.onClick = function() {
-            console.log("Clicked!");
-            marker.show = !marker.show;
-        };
-
         return marker;
     };
 })
